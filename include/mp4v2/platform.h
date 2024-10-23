@@ -12,7 +12,9 @@
 // TODO msft has finally re-included stdint in vs2010, so maybe at some point in the future this won't be needed.
 #ifndef MP4V2_NO_STDINT_DEFS
     #if defined( _WIN32 ) && !defined( __MINGW32__ )
+#if _MSC_VER < 1600
         typedef char      int8_t;
+#endif
         typedef short     int16_t;
         typedef int       int32_t;
         typedef long long int64_t;
